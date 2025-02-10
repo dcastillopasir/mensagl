@@ -31,9 +31,6 @@ else
     echo " La clave SSH ya existe."
 fi
 
-echo "hola2"
-echo "hola"
-
 #  Crear la VPC
 echo " Creando la VPC ($STACK_VPC)..."
 aws cloudformation create-stack --stack-name "$STACK_VPC" --template-body file://$VPC_FILE --capabilities CAPABILITY_NAMED_IAM
