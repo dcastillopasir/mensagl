@@ -12,11 +12,11 @@ Resources:
     Properties:
       InstanceType: t2.micro
       ImageId: ami-04b4f1a9cf54c11d0 # Ubuntu Server 24.04
-      KeyName: !Ref KeyName  # Ahora usa el parámetro dinámico
+      KeyName: !Ref KeyName  
       SubnetId: !ImportValue equipo3-SubnetPublic1-ID
       SecurityGroupIds:
         - !ImportValue equipo3-SG-Ejabberd-ID
-      PrivateIpAddress: 10.0.1.10
+      PrivateIpAddress: 10.205.1.10
       Tags:
         - Key: Name
           Value: "equipo3-ejabberd"
@@ -26,11 +26,11 @@ Resources:
     Properties:
       InstanceType: t2.micro
       ImageId: ami-04b4f1a9cf54c11d0 # Ubuntu Server 24.04
-      KeyName: !Ref KeyName  # Ahora usa el parámetro dinámico
+      KeyName: !Ref KeyName 
       SubnetId: !ImportValue equipo3-SubnetPrivate1-ID
       SecurityGroupIds:
         - !ImportValue equipo3-SG-PostgreSQL-ID
-      PrivateIpAddress: 10.0.3.100
+      PrivateIpAddress: 10.205.3.100
       Tags:
         - Key: Name
           Value: "equipo3-postgresql"
@@ -40,11 +40,11 @@ Resources:
     Properties:
       InstanceType: t2.micro
       ImageId: ami-04b4f1a9cf54c11d0 # Ubuntu Server 24.04
-      KeyName: !Ref KeyName  # Ahora usa el parámetro dinámico
+      KeyName: !Ref KeyName  
       SubnetId: !ImportValue equipo3-SubnetPublic2-ID
       SecurityGroupIds:
         - !ImportValue equipo3-SG-CMS-ID
-      PrivateIpAddress: 10.0.2.10
+      PrivateIpAddress: 10.205.2.10
       Tags:
         - Key: Name
           Value: "equipo3-cms"
@@ -54,11 +54,11 @@ Resources:
     Properties:
       InstanceType: t2.micro
       ImageId: ami-04b4f1a9cf54c11d0 # Ubuntu Server 24.04
-      KeyName: !Ref KeyName  # Ahora usa el parámetro dinámico
+      KeyName: !Ref KeyName 
       SubnetId: !ImportValue equipo3-SubnetPrivate2-ID
       SecurityGroupIds:
         - !ImportValue equipo3-SG-MySQL-ID
-      PrivateIpAddress: 10.0.4.100
+      PrivateIpAddress: 10.205.4.100
       Tags:
         - Key: Name
           Value: "equipo3-mysql"
